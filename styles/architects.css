@@ -161,6 +161,26 @@
     max-width: 540px;
 }
 
+/* sponcor related info */
+
+.sponcors-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponcor-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponcor-company{
+    filter: grayscale(100%);
+}
+.sponcor-company:hover{
+    filter: grayscale(0%);
+}
+
 /*small device responsive media query */
 
 @media screen and (max-width: 576px) {
@@ -168,8 +188,18 @@
         flex-direction: column;
     }
 
-    .team-img{
+    .team-img, .facts-container, .sponcor-company{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts-container, .sponcor-company{
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponcor-company{
+        justify-items: center;
+        gap: 50px;
     }
 
     .our-features{
@@ -186,5 +216,11 @@
 
     .our-features{
         margin: 50px auto;
+    }
+
+    .sponcor-company, .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
     }
 }
